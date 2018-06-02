@@ -1,0 +1,237 @@
+body {
+  background-color: #bcd1e4;
+}
+body .wrapper {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center;
+        align-content: center; 
+        justify-content: center; 
+        overflow: auto;    */
+  background-color: #ffffff;
+  border: 1.5px solid grey;
+}
+body .wrapper .side-bar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: flex-start;
+  vertical-align: top;
+  width: 22%;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+body .wrapper .side-bar .orders {
+  height: 50px;
+  padding-bottom: 2px;
+}
+body .wrapper .side-bar .orders img {
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  padding: 3px;
+}
+body .wrapper .side-bar .orders .orders-quantity {
+  position: absolute;
+  left: 35%;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .wrapper .side-bar .orders .search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 10px;
+}
+body .wrapper .side-bar .orders .search img {
+  width: 12px;
+  height: 12px;
+}
+body .wrapper .side-bar .orders .search input {
+  width: 70%;
+  border: 1px solid silver;
+}
+body .wrapper .side-bar .order-items {
+  flex: 2;
+  flex-direction: row;
+  overflow-y: auto;
+  border-top: 2px solid silver;
+}
+body .wrapper .side-bar .order-items .order-item {
+  display: flex;
+  border-bottom: 2px solid silver;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+body .wrapper .side-bar .order-items .order-item:hover {
+  background: #e8eff7;
+}
+body .wrapper .side-bar .order-items .order-item .order-information {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  align-content: space-around;
+  padding-right: 5px;
+}
+body .wrapper .side-bar .order-items .order-item .order-information .order-number {
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .wrapper .side-bar .order-items .order-item .order-information .company {
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body .wrapper .side-bar .order-items .order-item .order-information .date-shipped {
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body .wrapper .side-bar .order-items .order-item .status-information {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: right;
+}
+body .wrapper .side-bar .order-items .order-item .status-information .date-ordered {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .wrapper .side-bar .order-items .order-item .status-information .current-status {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body .wrapper .side-bar .order-items-futer {
+  background-color: black;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+body .wrapper .side-bar .order-items-futer img {
+  width: 13px;
+  padding-right: 5px;
+  padding-left: 15px;
+}
+body .wrapper .full-order-information {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eff4f8;
+  width: 78%;
+  box-sizing: border-box;
+}
+body .wrapper .full-order-information .order-main-information {
+  flex-direction: row;
+  background-color: #eff4f8;
+  border-bottom: 2px solid #b4d0e7;
+  justify-content: space-between;
+}
+body .wrapper .full-order-information .order-main-information .headline {
+  border-bottom: 1px solid #b4d0e7;
+  text-align: center;
+  padding-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+body .wrapper .full-order-information .order-main-information .wrap-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px;
+}
+body .wrapper .full-order-information .order-main-information .wrap-container .order-number-price {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  font-size: 20px;
+}
+body .wrapper .full-order-information .order-main-information .wrap-container .order-number-price p {
+  text-align: end;
+  font-size: 10px;
+  margin: 0px;
+}
+body .wrapper .full-order-information .order-main-information .wrap-container .delivering-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body .wrapper .full-order-information .order-main-information .wrap-container .delivering-type {
+  display: flex;
+}
+body .wrapper .full-order-information .order-main-information .wrap-container .delivering-type img {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+body .wrapper .full-order-information .shipping-adress-info {
+  margin: 15px;
+}
+body .wrapper .full-order-information .shipping-adress-info .shipping-caption {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 5px;
+  border-bottom: 2px solid silver;
+}
+body .wrapper .full-order-information .shipping-adress-info .shipping-adress {
+  display: flex;
+  margin: 15px;
+  align-self: flex-start;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body .wrapper .full-order-information .shipping-adress-info .shipping-adress .headers {
+  margin-left: 50px;
+  margin-right: 10px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .full-order-information .shipping-adress-info .shipping-adress .values {
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .full-order-information .table-container {
+  flex: 2;
+  overflow: auto;
+  border-top: 2px solid #b4d0e7;
+}
+body .wrapper .full-order-information .table-container .line-items {
+  margin: 15px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .wrapper .full-order-information .table-container table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+body .wrapper .full-order-information .table-container table .table-headers {
+  display: flex;
+}
+body .wrapper .full-order-information .order-futer {
+  background-color: black;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+body .wrapper .full-order-information .order-futer img {
+  width: 15px;
+  padding-right: 5px;
+}
+::-webkit-input-placeholder {
+  font-style: italic;
+}

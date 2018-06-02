@@ -1,0 +1,276 @@
+body {
+    background-color: rgb(188, 209, 228);
+    .wrapper {
+        width: 70%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 15%;
+        display: flex;
+        flex-wrap: wrap;
+        //align-items: stretch;
+        /* align-items: center;
+        align-content: center; 
+        justify-content: center; 
+        overflow: auto;    */
+        background-color: rgb(255, 255, 255);
+        border: 1.5px solid grey;
+
+        .side-bar {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-content: flex-start;
+            vertical-align: top;
+            width: 22%;
+            border: 1px solid silver;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            .orders {
+                height: 50px;
+                padding-bottom: 2px;
+                img {
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 5px;
+                    padding: 3px;
+                }
+                .orders-quantity {
+                    position: absolute;
+                    left: 35%; 
+                    font-size: 13px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                .search {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    align-content: center; 
+                    margin-top: 10px;
+                    img {
+                        width: 12px;
+                        height: 12px;
+                    }
+                    input {
+                        width: 70%;
+                        border: 1px solid silver;
+                    }
+
+                }
+
+            }
+            .order-items {
+                flex: 2;
+                flex-direction: row;
+                overflow-y: auto;
+                border-top: 2px solid silver;
+                .order-item {
+                    display: flex;
+                    border-bottom: 2px solid silver;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 10px;
+                    &:hover {
+                        background:  rgb(232, 239, 247);;
+                    }
+                    .order-information {
+                        display: inline-flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 80%;
+                        align-content: space-around;
+                        padding-right: 5px;
+                        .order-number {
+                            margin-bottom: 3px;
+                            font-size: 16px;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        .company {
+                            font-size: 12px;
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        }
+                        .date-shipped {
+                            font-size: 12px;
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                        }                       
+    
+                    }
+                    .status-information {
+                        display: inline-flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        text-align: right;
+
+                        .date-ordered {
+                            font-size: 17px;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        .current-status {
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                        }
+                    }
+
+                }
+            }
+            .order-items-futer {
+                background-color: black;
+                height: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;
+                img {
+                    width: 13px;
+                    padding-right: 5px;
+                    padding-left: 15px;
+                }
+            
+            }
+        }
+
+        .full-order-information {
+            display: flex;
+            flex-direction: column;
+            //align-items: stretch;
+            //justify-content: space-between;
+            border: 1px solid rgb(239, 244, 248);
+            width: 78%;
+            box-sizing: border-box;
+            .order-main-information {
+                flex-direction: row;
+                background-color: rgb(239, 244, 248);
+                border-bottom: 2px solid rgb(180, 208, 231);
+                justify-content: space-between;
+                .headline {
+                    border-bottom: 1px solid rgb(180, 208, 231);
+                    text-align: center;
+                    padding-bottom: 5px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 13px;
+                }
+
+                .wrap-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 15px;
+                    .order-number-price {
+                        display: flex;
+                        justify-content: space-between;
+                        font-family: Arial, Helvetica, sans-serif;
+                        padding-top: 10px;
+                        font-size: 20px;
+                        p {
+                            text-align: end;
+                            font-size: 10px;
+                            margin: 0px;
+                        }
+                    }
+                    .delivering-info {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 12px;
+                        line-height: 20px;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+                    } 
+                    .delivering-type {
+                        display: flex;
+                        img {
+                            padding-top: 20px;
+                            padding-right: 20px;
+                        }
+                        
+                    }
+                }
+              
+            }
+            .shipping-adress-info {
+                margin: 15px;
+                .shipping-caption {
+                    font-size: 15px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid silver;
+                }
+                .shipping-adress {
+                    display: flex;
+                    margin: 15px;
+                    align-self: flex-start;
+                    font-size: 12px;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    .headers {
+                        margin-left: 50px;
+                        margin-right: 10px;
+                        text-align: right;
+                        display: flex;
+                        flex-direction: column;  
+                    }
+                    .values {
+                        display: flex;
+                        flex-direction: column;  
+                    }
+                }
+
+            }
+
+            .table-container {
+                flex: 2;
+                overflow: auto;
+                border-top: 2px solid rgb(180, 208, 231);
+                .line-items {
+                    margin: 15px;
+                    font-size: 15px;
+                    font-family: Arial, Helvetica, sans-serif;
+
+
+                }
+
+                table {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow-x: auto;
+                    .table-headers {
+                        display: flex;
+                        td {
+
+                            p {
+
+                            }
+                        }
+                    }
+                    .table-values {
+                        td {
+                            p {
+                            
+                            }
+                        } 
+                
+                    }
+                }
+                
+            }
+            .order-futer {
+                background-color: black;
+                height: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;
+                img {
+                    width: 15px;
+                    padding-right: 5px;
+                }
+            
+            }
+        }
+        
+    }
+    
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
